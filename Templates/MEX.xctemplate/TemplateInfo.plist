@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.mexmaci64</string>
+
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.osxBase</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template builds a MATLAB MEX-library.</string>
+	<key>SortOrder</key>
+	<integer>2</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Product Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string>Your new product&apos;s name</string>
+			<key>EmptyReplacement</key>
+			<string>ProductName</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>matlabVersion</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>MATLAB Application</string>
+			<key>Description</key>
+			<string>Name of the MATLAB application.</string>
+			<key>Default</key>
+			<string>MATLAB_R2015a</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>matlabVersionDesc</string>
+			<key>Name</key>
+			<string></string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string></string>
+			<key>Default</key>
+			<string>The name of the MATLAB application as it appears in Finder.</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+
+	</array>
+
+	<key>Nodes</key>
+	<array>
+		<string>___PACKAGENAMEASIDENTIFIER___.h</string>
+		<string>___PACKAGENAMEASIDENTIFIER___.c</string>
+                <string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+	</array>
+	
+	<key>Project</key>
+	<dict>
+		
+		<key>BasedOn</key>
+		<dict>
+			<key>Debug</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+			<key>Release</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>TargetIdentifier</key>
+			<string>com.mathworks.mexfile</string>
+			<key>Name</key>
+			<string>___PACKAGENAME___</string>
+			<key>Configurations</key>
+			<dict>
+				<key>Debug</key>
+				<dict/>
+				<key>Release</key>
+				<dict/>
+			</dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.library.dynamic</string>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>MACH_O_TYPE</key>
+				<string>mh_bundle</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string></string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string></string>
+				<key>EXECUTABLE_EXTENSION</key>
+				<string>mexmaci64</string>
+				<key>CONFIGURATION_BUILD_DIR</key>
+				<string>$(SYMROOT)</string>
+				<key>SYMROOT</key>
+				<string>$(SRCROOT)/build/$(CONFIGURATION)</string>
+				<key>HEADER_SEARCH_PATHS</key>
+				<string>$(MATLABROOT)/extern/include</string>
+				<key>LIBRARY_SEARCH_PATHS</key>
+				<string>$(MATLABROOT)/bin/maci64</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-lmx -lmex -lmat</string>
+            </dict>
+		</dict>
+	</array>
+
+	<key>Definitions</key>
+	<dict>
+		<key>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</key>
+		<dict>
+			<key>Path</key>
+			<string>mex.xcconfig</string>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___.h</key>
+		<dict>
+			<key>Path</key>
+			<string>MEXTemplate.h</string>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___.c</key>
+		<dict>
+			<key>Path</key>
+			<string>MEXTemplate.c</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
