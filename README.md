@@ -7,7 +7,7 @@ Also the location for install specified at the above link is not correct and wil
 
 mkdir -p $HOME/Library/Developer/Xcode/
 
-Then put the folder Templates into /Library/Developer/Xcode/
+Then put the folder Templates into $HOME/Library/Developer/Xcode/
 
 Now when you open Xcode 6 on Yosemite you get a new Project template.
 
